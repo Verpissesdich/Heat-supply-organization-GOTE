@@ -1,0 +1,430 @@
+html {
+    box-sizing: border-box; 
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+}
+
+.container {
+    max-width: 1420px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin: 0 auto;   
+}
+
+@font-face {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 400;
+      src: local("Roboto"),
+      local("/Fonts/Roboto/Roboto-Medium.ttf") format("woff2"),
+      url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap') format("woff");
+}
+
+.header__inner {
+    display:flex;
+    justify-content: space-between;
+    z-index: 10002;
+    position: sticky; 
+    top: 30px;
+    left: 10px;
+    /* border: solid 5px rgb(211, 225, 11); */
+} 
+
+.body-no-scroll {
+    overflow: hidden;
+}
+
+:root  {
+    --black: #333;
+    --white: #ABA8A8;
+    --bg-color: #121B25;
+    --accent-color: #1AA090;
+    --text-color: #d6d6d6;  
+}
+.dark {
+    --black: #fff; 
+    --white: #333;
+}
+
+
+.mask_main
+{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    z-index: 0;
+    user-select: none;
+    mix-blend-mode: screen;
+   /* background-size: 1800px; */
+}
+.dark .mask_main
+{
+    filter: invert(1);
+    mix-blend-mode: multiply;
+}
+
+.main h1
+{
+    position: relative; 
+    z-index: 3;
+    font-size: 8vw;
+    color: #fff;
+    text-shadow: 0 20px 30px rgba(0,0,0,2);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.logo{
+    z-index: 10003;
+    display: flex;
+    /* position: fixed; */
+    margin-top: 10px;
+    width: 30px;
+    height: 50px; 
+    /* border: solid 3px rgb(54, 225, 11); */
+}
+.rightSide {
+    display: flex;
+    z-index: 10003;
+    position: fixed;
+    right: 20px;
+    top: 20px;
+    /* border: solid 3px rgb(54, 225, 11); */
+}
+
+.btns {
+    position: relative;  
+    width: 40px;
+    height: 40px;
+    background: (--white); 
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin-left: 10px;
+    /* border: solid 3px rgb(54, 225, 11); */
+}
+
+p{
+    color: var(--black);  
+    
+    /* border: solid 3px rgb(54, 225, 11); */
+   
+}
+
+
+.btns ion-icon {
+    font-size: 1.5em;
+    color: var(--black);  
+}
+.btns.menuToggle ion-icon {
+    font-size: 2em;
+}
+.btns.dayNight ion-icon {
+    font-size: 2em;
+}
+.btns ion-icon:nth-child(2) {
+    display: none;
+}
+.btns.active ion-icon:nth-child(2) {
+    display: block;
+}
+.btns.active ion-icon:nth-child(1) {
+    display: none;
+}
+
+
+.menu__list
+{
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%; 
+    display: flex;
+    justify-content: center;  
+    align-items: center;
+    flex-direction: column;
+    background: var(--white); 
+    
+    z-index: 5;
+    transition: 0.5s;
+}
+.menu__list.active
+{
+    left: 0%;
+}
+.menu__list li
+{
+    list-style: none;  
+}
+.menu__list li a
+{
+    display: inline-flex;
+    margin: 5px 0;
+    font-size: 1.25em;
+    text-decoration: none;
+    color: var(--black); 
+    padding: 5px 20px;
+    border-radius: 40px;
+}
+.menu__list li a:hover
+{
+    background: var(--black);
+    color: var(--white); 
+}
+
+
+.header{
+    /* display: flex; */
+    border: solid 1px rgb(225, 11, 57);
+}
+
+.sci
+{
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    z-index: 4;
+    display: flex;
+    flex-direction: column;
+    /* border: solid 3px rgb(225, 11, 57); */
+    color: var(--black); 
+}
+.sci li{
+    list-style: none;
+}
+.sci li a{
+    text-align: none;
+    color: var(--black); 
+    font-size: 1.75em;
+}
+
+
+body {
+    font-family: "Bona Nova", serif;
+    font-weight: 400;
+    font-size: 14px;
+    --bg-color: #121b25;
+    height: 1800px;
+    /* overscroll-behavior: none; */
+    transition: .4s;
+    /* background: linear-gradient(#58545C, #babba7); */
+    /* color: var(--black);   */
+    overscroll-behavior: none;
+    /* position: relative;   */
+    /* width: 100%; */
+    /* background: (--white);  */
+    border: solid 1px rgb(83, 24, 184);
+
+    position: relative; 
+    background-size: cover;
+    object-fit: cover;
+
+
+
+    
+  
+
+   
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.footer {
+    border: solid 1px rgb(225, 11, 57);
+	height: 40px;
+    line-height: 1.3; 
+    z-index: 10000;
+    filter: blur(0.6px); 
+    opacity: 95%;
+    /* left: 100px; */
+    position: fixed;
+    bottom: 0;
+    color: var(--black); 
+    user-select: none; 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* -------------------------- custom scrollbar ----------------------------------------------------begin-----*/
+::-webkit-scrollbar{
+    width: 10px;
+}
+::-webkit-scrollbar-track{
+    background: #d1e5ff;
+}
+::-webkit-scrollbar-thumb{
+    background: linear-gradient(#3cce14, #a1da56);
+    border-radius: 8px;
+}
+/* -------------------------- custom scrollbar -------------------------------------------------------end--*/
+
+
+/* -------------------------- cursor mouse круглые кружочки ----------------------------------------------------begin-----*/
+.click_effect{
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    border: 5px solid #3cce14;
+    pointer-events: none;
+    z-index: 10000;
+    opacity: 0;
+    margin-top: -30px;
+    margin-left: -30px;
+    border-radius: 50%;
+    animation-name: click_animation;
+    animation-duration: 0.7s;
+    animation-timing-function: linear;
+}
+
+@keyframes click_animation {
+    10%{
+        opacity: 1;
+        transform: scale(0.1);
+    }
+    20%{
+        opacity: 1;
+        transform: scale(0.2);
+    }
+    30%{
+        opacity: 1;
+        transform: scale(0.3);
+    }
+
+    40%{
+        opacity: 0.9;
+        transform: scale(0.4);
+    }
+    50%{
+        opacity: 0.7;
+        transform: scale(0.5);
+    }
+    60%{
+        opacity: 0.5;
+        transform: scale(0.6);
+    }
+    70%{
+        opacity: 0.3;
+        transform: scale(0.7);
+    }
+    80%{
+        opacity: 0.1;
+        transform: scale(0.8);
+    }
+    90%{
+        opacity: 0;
+        transform: scale(1);
+    }
+    100%{
+        opacity: 0;
+        transform: scale(1);
+    }
+}
+/* -------------------------- cursor mouse ----------------------------------------------------end-----*/
+
+
+/* --------------------------------------- переход между страницами ----------------------------начало-----------------*/
+.preloader2 {
+    position: fixed;
+    z-index: 9999999999;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+}            
+.preloader2 span {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    background-color: #FFF;    
+    transition: 0.4s;
+}    
+.preloader2 span:nth-child(2) {
+    transition-delay: 0.05s;
+}
+.preloader2 span:nth-child(3) {
+    transition-delay: 0.1s;                
+}    
+.preloader2 span:nth-child(4) {
+    transition-delay: 0.15s;
+}
+.preloader2 span:nth-child(5) {
+    transition-delay: 0.2s;            
+}    
+.preloader2 span:nth-child(6) {
+    transition-delay: 0.25s;
+}
+.preloader2 span:nth-child(7) {
+    transition-delay: 0.3s;
+}
+.preloader2 span:nth-child(8) {
+    transition-delay: 0.35s;
+}
+.preloader2 span:nth-child(9) {
+    transition-delay: 0.4s;
+}
+.preloader2.on {
+    visibility: hidden;
+}
+.preloader2.on span {
+    opacity: 0;
+}            
+.preloader2.off span  {
+    opacity: 1;
+}
+/* --------------------------------------- переход между страницами ----------------------------конец----------------
